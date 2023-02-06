@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import React, { useReducer } from 'react';
+import { useState, useEffect } from 'react'
 
 import { nanoid } from 'nanoid';
+import Hi from './Hi';
 
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
   const [updated, setUpdates] = useState<string>("")
   const [updatemode, setUpdateMode] = useState<boolean>(false)
 
+  useEffect(() => {
 
+  }, [])
 
   const [lisdata, setListdata] = useState<{ id: string, name: string }[]>([])
   console.log(lisdata)
@@ -21,6 +25,7 @@ function App() {
     setListdata(prev => [...prev, { name: list, id: nanoid() }])
 
   }
+
   const finishedtask = (id: string) => {
     setListdata(lisdata.filter(t => t.id !== id));
     setTasksDone([...tasksDone, ...lisdata.filter(task => task.id === id)]);
@@ -38,7 +43,7 @@ function App() {
     setUpdateMode(false)
   };
 
-  console.log
+
   return (
     <div className=" w-full h-screen flex flex-col   p-10  ">
       <div className=' w-full flex  justify-center gap-4  items-center flex-col'>
@@ -117,9 +122,11 @@ function App() {
 
 
       </div>
-
+      <Hi />
     </div>
   )
 }
+const instance = React.createElement(App);
+console.log(instance);
 
 export default App
