@@ -2,6 +2,7 @@
 import Usestate from './Usetate';
 import Reduce from "./Reduce"
 import UseReducer from './UseReducer'
+import Pagination from './Pagination';
 
 
 
@@ -11,7 +12,8 @@ function App() {
     <div >
       {/* <Usestate /> */}
       {/* <Reduce /> */}
-      <UseReducer/>
+      {/* <UseReducer/> */}
+      <Pagination/>
     </div>
   )
 }
