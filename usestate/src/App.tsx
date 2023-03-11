@@ -6,6 +6,7 @@ import Pagination from './Pagination';
 import Editor from "./Editor";
 import "./styles.css"
 import Quiz from './quizapp/Quiz';
+import Practise from './quizapp/Practise';
 
 
 
@@ -17,8 +18,10 @@ function App() {
       <Reduce /> 
      <UseReducer/>
            <Editor/>
+                 <Quiz />
       <Pagination/> */}
-      <Quiz />
+      <Practise />
+
 
     </div>
   )
